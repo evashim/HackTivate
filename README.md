@@ -56,7 +56,9 @@ New commitment: Motorcycle RM300 for 24 months
 
 ## AI Tools Used
 
-CashCue uses explainable rule-based AI logic, not a black-box model. The system calculates:
+CashCue uses a hybrid AI approach that combines explainable rule-based financial logic with an external AI API.
+
+First, the system calculates the user’s financial readiness using transparent rule-based logic. The calculation considers:
 
 - commitment ratio,
 - savings rate,
@@ -66,7 +68,11 @@ CashCue uses explainable rule-based AI logic, not a black-box model. The system 
 - remaining monthly balance,
 - safer new commitment limit.
 
-Based on those factors, CashCue generates a decision and explanation. This approach is transparent and suitable for financial decision support because users and judges can understand why a result is produced.
+Based on these factors, CashCue produces a financial decision such as **Proceed**, **Proceed Carefully**, **Reduce**, **Delay**, or **Avoid**. This rule-based logic ensures that the result is explainable and consistent, which is important for financial decision support.
+
+After the decision is generated, CashCue sends the financial summary to an AI API through `ai_advice.php`. The AI API generates simple personalized advice in natural language so users can better understand the result and know what action to take next.
+
+This approach allows CashCue to remain transparent while still using AI to improve user understanding and guidance.
 
 ## Technology Used
 
