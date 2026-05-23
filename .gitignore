@@ -1,0 +1,13 @@
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local environment / logs
+*.log
+.env
+
+# XAMPP/database dumps except provided schema
+*.sql.gz
+*.bak
